@@ -1,5 +1,8 @@
 ﻿namespace JoaLauncher.Api.Injectables;
 
+/// <summary>
+/// 
+/// </summary>
 public interface IJoaLogger
 {
     public enum LogLevel
