@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>JoaLauncher.Api</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Flurin Bruehwiler</Authors>
+        <Company>JoaLauncher</Company>
+        <Product>Joa</Product>
+        <PackageLicenseUrl>MIT</PackageLicenseUrl>
+        <Description>
+            The package used to develop plugins for Joa
+        </Description>
+    </PropertyGroup>
+    
+</Project>
