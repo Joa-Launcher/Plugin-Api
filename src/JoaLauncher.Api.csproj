@@ -10,6 +10,7 @@
         <Company>JoaLauncher</Company>
         <Product>Joa</Product>
         <PackageLicenseUrl>MIT</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/Joa-Launcher/Plugin-Api</RepositoryUrl>
         <Description>
             The package used to develop plugins for Joa
         </Description>
