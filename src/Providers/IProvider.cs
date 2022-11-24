@@ -1,13 +1,6 @@
 ﻿namespace JoaLauncher.Api.Providers;
 
-/// <summary>
-/// A Provider has the job to provide search results.
-/// A Provider can be used at two points
-/// 1. It can be registered as a global provider
-/// 2. It can be added to a step using the StepBuilder
-/// in a search result
-/// </summary>
-public interface IProvider
+public interface IGenericProvider
 {
     /// <summary>
     /// A performance critical method used to return search results.
@@ -17,3 +10,14 @@ public interface IProvider
     /// <returns></returns>
     public List<ISearchResult> GetSearchResults(string searchString);
 }
+
+/// <summary>
+/// A Provider has the job to provide search results.
+/// A Provider can be used at two points
+/// 1. It can be registered as a global provider
+/// 2. It can be added to a step using the StepBuilder
+/// in a search result
+/// </summary>
+public interface IProvider<in T> : IGenericProvider where T : IProviderContext { }
+
+public interface IProvider : IGenericProvider { }
