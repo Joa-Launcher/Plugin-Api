@@ -23,7 +23,11 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
+        if: ${{ !(github.event_name == 'release' && github.event.action == 'published') }}
         run: dotnet build --no-restore
+      - name: Build release
+        if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
+        run: dotnet build /p:PublicRelease=true
       - name: Test
         run: dotnet test --no-build --verbosity normal
       - name: Add nuget source
@@ -31,7 +35,7 @@ jobs:
       - name: Pack
         run: dotnet pack --configuration Release
       - name: Push github.com
-        run: dotnet nuget push "bin/Release/JoaLauncher.Api.1.0.0.nupkg" --source "github"
+        run: dotnet nuget push "bin/Release/*.nupkg" --source "github"
       - name: Push nuget.org
         if: ${{ github.event_name == 'release' && github.event.action == 'published' }}
-        run: dotnet nuget push "bin/Release/JoaLauncher.Api.1.0.0.nupkg" --api-key ${{secrets.NUGET_ORG_API_KEY}} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push "bin/Release/*.nupkg" --api-key ${{secrets.NUGET_ORG_API_KEY}} --source https://api.nuget.org/v3/index.json
