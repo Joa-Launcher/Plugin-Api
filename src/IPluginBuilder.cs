@@ -29,5 +29,5 @@ public interface IPluginBuilder
     /// </summary>
     /// <param name="searchResult"></param>
     /// <returns></returns>
-    public IPluginBuilder AddGlobalResult(ISearchResult searchResult);
+    public IPluginBuilder AddGlobalResult(SearchResult searchResult);
 }
