@@ -13,7 +13,7 @@ public interface IStepBuilder
     /// <typeparam name="T">The Type of Provider to be added to the StepBuilder</typeparam>
     /// <returns>The StepBuilder</returns>
     public IStepBuilder AddProvider<T>() where T : IProvider;
-    
+
     /// <summary>
     /// Can be used to add a Provider with a ProviderContext to the Step.
     /// </summary>
@@ -21,7 +21,6 @@ public interface IStepBuilder
     /// <typeparam name="TProvider">The Type of Provider to be added to the StepBuilder</typeparam>
     /// <typeparam name="TContext">The Type of ProviderContext used to instatiate the Provider</typeparam>
     /// <returns>The StepBuilder</returns>
-    public IStepBuilder AddProvider<TProvider, TContext>(TContext providerContext) 
-        where TProvider : IProvider<TContext> 
-        where TContext : IProviderContext;
+    public IStepBuilder AddProvider<TProvider, TContext>(TContext providerContext)
+        where TProvider : IProvider<TContext>;
 }

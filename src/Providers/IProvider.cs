@@ -18,6 +18,10 @@ public interface IGenericProvider
 /// 2. It can be added to a step using the StepBuilder
 /// in a search result
 /// </summary>
-public interface IProvider<in T> : IGenericProvider where T : IProviderContext { }
+public interface IProvider<in T> : IGenericProvider
+{
+}
 
-public interface IProvider : IGenericProvider { }
+public interface IProvider : IGenericProvider
+{
+}
