@@ -25,7 +25,7 @@ public abstract class SearchResult
     /// A list of <see cref="ContextAction"/> which represent the
     /// possible actions the user could execute on this search result
     /// </summary>
-    public List<ContextAction>? Actions { get; init; }
+    public List<ContextAction>? Actions { get; set; }
 
     /// <summary>
     /// The method which gets called if the user executes the search result
