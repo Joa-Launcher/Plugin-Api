@@ -8,7 +8,7 @@ public interface IGenericProvider
     /// </summary>
     /// <param name="searchString"></param>
     /// <returns></returns>
-    public List<ISearchResult> GetSearchResults(string searchString);
+    public List<SearchResult> GetSearchResults(string searchString);
 }
 
 /// <summary>
