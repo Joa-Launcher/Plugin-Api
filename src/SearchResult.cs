@@ -16,7 +16,7 @@ public abstract class SearchResult
     public required string Description { get; init; }
 
     /// <summary>
-    /// The Icon displayed next to the title and description 
+    /// The Icon displayed next to the title and description
     /// Should contain the path to the icon. URLs are not supported
     /// </summary>
     public required string Icon { get; init; }
