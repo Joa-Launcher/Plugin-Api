@@ -11,7 +11,7 @@ public record ContextAction
     /// <summary>
     /// The key which is used to identify the ContextAction
     /// </summary>
-    public string Key { get; init; } = default!;
+    public string Id { get; init; } = default!;
     
     /// <summary>
     /// The name which will be displayed to the user
@@ -22,5 +22,5 @@ public record ContextAction
     /// The keyboard key that the user can use to execute
     /// the search result with this action
     /// </summary>
-    public Key KeyBoardKey { get; init; } = default!;
+    public Key Key { get; init; } = default!;
 }
