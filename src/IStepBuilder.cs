@@ -23,4 +23,11 @@ public interface IStepBuilder
     /// <returns>The StepBuilder</returns>
     public IStepBuilder AddProvider<TProvider, TContext>(TContext providerContext)
         where TProvider : IProvider<TContext>;
+
+    public IStepBuilder WithOptions(StepOptions stepOptions);
+}
+
+public sealed class StepOptions
+{
+    public bool ShowSearchResultsAllways { get; set; } = false;
 }
