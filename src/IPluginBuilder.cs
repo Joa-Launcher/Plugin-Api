@@ -39,7 +39,7 @@ public interface IPluginBuilder
     /// <param name="callback"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public IPluginBuilder AddSaveAction<T>(string nameOfProperty, Action<T> callback) where T : ISetting;
+    public IPluginBuilder AddSaveAction<T>(string nameOfProperty, Action<T> callback) where T : class, ISetting;
 
     /// <summary>
     /// Adds a SaveAction for a specified settings type
@@ -48,5 +48,5 @@ public interface IPluginBuilder
     /// <param name="callback"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public IPluginBuilder AddSaveAction<T>(Action<T> callback) where T : ISetting;
+    public IPluginBuilder AddSaveAction<T>(Action<T> callback) where T : class, ISetting;
 }
