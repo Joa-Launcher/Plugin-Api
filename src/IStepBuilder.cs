@@ -24,10 +24,21 @@ public interface IStepBuilder
     public IStepBuilder AddProvider<TProvider, TContext>(TContext providerContext)
         where TProvider : IProvider<TContext>;
 
+    /// <summary>
+    /// Configures the step with the provided options 
+    /// </summary>
+    /// <param name="stepOptions"></param>
+    /// <returns></returns>
     public IStepBuilder WithOptions(StepOptions stepOptions);
 }
 
+/// <summary>
+/// Options used to configure a step
+/// </summary>
 public sealed class StepOptions
 {
+    /// <summary>
+    /// If true, the user doesn't need to press a key for the search results to be shown
+    /// </summary>
     public bool ShowSearchResultsAllways { get; set; } = false;
 }
