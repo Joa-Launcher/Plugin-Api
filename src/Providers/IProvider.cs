@@ -1,6 +1,6 @@
 ﻿namespace JoaLauncher.Api.Providers;
 
-public interface IGenericProvider
+public interface IProvider
 {
     /// <summary>
     /// A performance critical method used to return search results.
@@ -18,10 +18,6 @@ public interface IGenericProvider
 /// 2. It can be added to a step using the StepBuilder
 /// in a search result
 /// </summary>
-public interface IProvider<in T> : IGenericProvider
-{
-}
-
-public interface IProvider : IGenericProvider
+public interface IProvider<in T> : IProvider
 {
 }
