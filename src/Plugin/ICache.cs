@@ -1,4 +1,4 @@
-﻿namespace JoaLauncher.Api;
+﻿namespace JoaLauncher.Api.Plugin;
 
 /// <summary>
 /// An ICache can be used to cache information.
