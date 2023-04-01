@@ -40,7 +40,7 @@ public interface IPluginBuilder
     /// <param name="callback"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public IPluginBuilder AddSaveAction<T>(string nameOfProperty, Action<T> callback) where T : class, ISetting;
+    public IPluginBuilder AddSaveAction<T>(string nameOfProperty, Action<T> callback) where T : class;
 
 
     /// <summary>
@@ -52,5 +52,5 @@ public interface IPluginBuilder
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
-    public IPluginBuilder AddSaveAction<T>(string nameOfProperty, Func<T, Task> callback) where T : class, ISetting;
+    public IPluginBuilder AddSaveAction<T>(string nameOfProperty, Func<T, Task> callback) where T : class;
 }
